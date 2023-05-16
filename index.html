@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websocket canvas</title>
+    <script src="https://cdn.socket.io/socket.io-3.0.0.js"></script>
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="drawing">
+
+        <canvas id="myCanvas" width="800px" height="800px"></canvas>
+
+        <div class="canvasControls">
+
+            <button onclick="clearCanvas()">Clear the canvas</button>
+
+            <div class="color">
+
+                <p>velg farge her:</p>
+                <input type="color" id="colorpicker" onchange="changeColor()">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="aktivTeller">
+
+        <h2>Aktive brukere:</h2>
+        <h1 id="aktiveBrukere"></h1>
+
+    </div>
+</body>
+
+</html>
